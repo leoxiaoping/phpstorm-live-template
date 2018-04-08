@@ -85,11 +85,11 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="swi" value="switch ($VARS$) {&#10;&#9;case '$VALUE$':&#10;&#9;&#9;$CODE1$&#10;&#9;&#9;break;&#10;&#9;&#10;&#9;default:&#10;&#9;&#9;$CODE2$&#10;&#9;&#9;break;&#10;}" description="switch ($variable) {..." toReformat="false" toShortenFQNames="true">
-    <variable name="VARS" expression="phpSuggestVariableName()" defaultValue="&quot;$variable&quot;" alwaysStopAt="true" />
-    <variable name="VALUE" expression="phpSuggestVariableName()" defaultValue="&quot;$value&quot;" alwaysStopAt="true" />
-    <variable name="CODE1" expression="phpSuggestVariableName()" defaultValue="&quot;// code&quot;" alwaysStopAt="true" />
-    <variable name="CODE2" expression="phpSuggestVariableName()" defaultValue="&quot;// code&quot;" alwaysStopAt="true" />
+  <template name="switch" value="switch ($VARS$) {&#10;&#9;case '$VALUE$':&#10;&#9;&#9;$CODE1$&#10;&#9;&#9;break;&#10;&#9;&#10;&#9;default:&#10;&#9;&#9;$CODE2$&#10;&#9;&#9;break;&#10;}" description="switch ($variable) {..." toReformat="false" toShortenFQNames="true">
+    <variable name="VARS" expression="phpVar" defaultValue="&quot;$variable&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="phpVar" defaultValue="&quot;$value&quot;" alwaysStopAt="true" />
+    <variable name="CODE1" expression="phpVar" defaultValue="&quot;// code&quot;" alwaysStopAt="true" />
+    <variable name="CODE2" expression="phpVar" defaultValue="&quot;// code&quot;" alwaysStopAt="true" />
     <context>
       <option name="PHP Statement" value="true" />
     </context>
@@ -110,7 +110,7 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="glo" value="global $db;&#10;$END$" description="global $db;" toReformat="false" toShortenFQNames="true">
+  <template name="global" value="global $db;&#10;$db" description="global $db;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP Statement" value="true" />
     </context>
